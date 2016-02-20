@@ -133,7 +133,7 @@ injuries %>% setorder(-INJURIES) %>% head(1) %>% data.table()
 ### Which types of events have the greatest economic consequences?  
 
 Plotting total `DAMAGES.USD` by `EVTYPE` for top 10 event types   
-```{r}
+```{r, tidy=TRUE}
 ggplot(data = topDamages,
        aes(x = topDamages$EVTYPE, y = topDamages$DAMAGES.USD)) + 
         geom_bar(stat = "identity") + 
